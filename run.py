@@ -11,6 +11,10 @@ class TicTacToe:
     def print_board_num():
         number_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in number_board:
-          print(f'''| {' | '.join(row)} |''')
+            print(f'''| {' | '.join(row)} |''')
+    
+    def available_moves(self):
+        return [i for i , spot in enumerate(self.board) if spot == ' ']
 
-print(TicTacToe.print_board_num())
+
+# print(TicTacToe.print_board_num())
