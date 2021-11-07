@@ -1,4 +1,5 @@
 from players import HumanPlayer, RandomComputerPlayer
+import time
 
 class TicTacToe:
     def __init__(self):
@@ -43,16 +44,13 @@ class TicTacToe:
             return True
         # Check diagonal:
         if square % 2 == 0:
-          diagonal1 = [self.board[i] for i in [0, 4, 8]]
-          if all([spot == letter for spot in diagonal1]):
-            return True
-          diagonal2 = [self.board[i] for i in [2, 4, 6]]
-          if all([spot == letter for spot in diagonal2]):
-            return True
+            diagonal1 = [self.board[i] for i in [0, 4, 8]]
+            if all([spot == letter for spot in diagonal1]):
+                return True
+            diagonal2 = [self.board[i] for i in [2, 4, 6]]
+            if all([spot == letter for spot in diagonal2]):
+                return True
 
-
-
-# print(TicTacToe.print_board_nums())
 
 def play(game, x_player, o_player, print_game=True):
     if print_game:
@@ -75,11 +73,14 @@ def play(game, x_player, o_player, print_game=True):
             if game.current_winner:
                 if print_game:
                     print(f'{letter} wins!')
+                return letter
 
             letter = 'O' if letter == 'X' else 'X'
-        
-        if print_game:
-            print("It's a tie!")
+        # break
+        time.sleep(0.8)
+
+    if print_game:
+        print("It's a tie!")
 
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
