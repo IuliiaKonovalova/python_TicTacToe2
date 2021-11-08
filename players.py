@@ -1,5 +1,6 @@
 import math
 import random
+import os
 
 class Player:
     def __init__(self, letter):
@@ -22,6 +23,7 @@ class HumanPlayer(Player):
         super().__init__(letter)
 
     def get_move(self, game):
+        os.system('cls' if os.name == 'nt' else 'clear')
         valid_square  = False
         val = None
         while not valid_square:
