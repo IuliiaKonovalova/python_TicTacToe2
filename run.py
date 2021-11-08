@@ -1,5 +1,6 @@
 from players import HumanPlayer, RandomComputerPlayer
 import time
+import os
 
 class TicTacToe:
     def __init__(self):
@@ -83,6 +84,7 @@ def play(game, x_player, o_player, print_game=True):
         print("It's a tie!")
 
 if __name__ == '__main__':
+    os.system('cls' if os.name == 'nt' else 'clear')
     x_player = HumanPlayer('X')
     o_player = RandomComputerPlayer('O')
     t = TicTacToe()
