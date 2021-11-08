@@ -5,3 +5,19 @@ This small project was created based on [Kylie Ying's](https://www.youtube.com/c
 ## Changes were made:
 
 1. Add builtin to clear the terminal.
+
+
+----
+## Technologies were used:
+
+- [Python](https://www.python.org/) was used as the the core language of the project.
+
+ ---
+## Acknowledgements
+
+- [freeCodeCamp YouTube Channel](https://www.youtube.com/c/Freecodecamp) for providing the platform.
+
+- [freeCodeCamp](www.freecodecamp.org) for engaging in learning.
+
+- [Kylie Ying's](https://www.youtube.com/c/YCubed) for teaching.
+---
